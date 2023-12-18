@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listener</title>
+    <style>body {display: flex; flex-direction: column; justify-content: center; align-items: center;}</style>
+</head>
+<body>
+    <h1>Listener Results</h1> <br>
+
+    <div align="center">E-mail:<br><span id="e-mail"></span></div> <br>
+
+    <div align="center">Password:<br><span id="pass-word"></span></div>
+    
+    <script>
+
+        const emaildata = localStorage.getItem('e-mail');
+        const passworddata = localStorage.getItem('pass-word');
+
+        document.getElementById('e-mail').textContent = emaildata;
+        document.getElementById('pass-word').textContent = passworddata;
+
+    </script>
+
+    <div id="messageDisplay"></div>
+
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.origin === 'HTTP HERE!!!!!!') {
+                document.getElementById('messageDisplay').innerText = event.data;
+            }
+        });
+    </script>
+</body>
+</html>
