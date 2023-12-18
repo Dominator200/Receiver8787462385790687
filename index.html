@@ -14,23 +14,20 @@
     <div align="center">Password:<br><span id="pass-word"></span></div>
     
     <script>
-
-        const emaildata = localStorage.getItem('e-mail');
-        const passworddata = localStorage.getItem('pass-word');
-
-        document.getElementById('e-mail').textContent = emaildata;
-        document.getElementById('pass-word').textContent = passworddata;
-
-    </script>
-
-    <div id="messageDisplay"></div>
-
-    <script>
-        window.addEventListener('message', function(event) {
+                window.addEventListener('message', function(event) {
             if (event.origin === 'https://dominator200.github.io/Google-login/') {
                 document.getElementById('messageDisplay').innerText = event.data;
             }
         });
-    </script>
+        
+        const emaildata = event.data.getItem('e-mail');
+        const passworddata = event.data.getItem('pass-word');
+
+        document.getElementById('e-mail').textContent = emaildata;
+        document.getElementById('pass-word').textContent = passworddata;
+
+
+    <div id="messageDisplay"></div>
+
 </body>
 </html>
