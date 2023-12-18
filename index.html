@@ -16,15 +16,13 @@
     <script>
         window.addEventListener('message', function(event) {
         if (event.origin === 'https://dominator200.github.io/Google-login/') {
-            document.getElementById('messageDisplay').innerText = event.data;
+            document.getElementById('EmailValue').innerText = emaildata;
+            document.getElementById('PasswordValue').innerText = passworddata;
             }
         });
         
         const emaildata = event.data.getItem('EmailValue');
         const passworddata = event.data.getItem('PasswordValue');
-
-        document.getElementById('e-mail').textContent = emaildata;
-        document.getElementById('pass-word').textContent = passworddata;
 
 
     <div id="messageDisplay"></div>
