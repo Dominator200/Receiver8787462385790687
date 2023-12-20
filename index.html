@@ -9,9 +9,9 @@
 <body>
     <h1>Listener Results</h1><br>
 
-    <div align="center">E-mail:<br><span id="e-mail"></span></div> <br>
+    <div align="center">E-mail:<br><span id="EmailValue"></span></div> <br>
 
-    <div align="center">Password:<br><span id="pass-word"></span></div>
+    <div align="center">Password:<br><span id="PasswordValue"></span></div>
     
     <script>
         window.addEventListener('message', function(event) {
@@ -20,7 +20,7 @@
             document.getElementById('PasswordValue').innerText = password.data;
             }
         });
-        
+
         const emaildata = event.data.getItem('EmailValue');
         const passworddata = event.data.getItem('PasswordValue');
 
@@ -31,11 +31,7 @@
         document.getElementById("PasswordValue").innerHTML = e.origin + " said: " + e.data;
         document.getElementById("EmailValue").innerHTML = e.origin + " said: " + e.data;
         }
-    <script>
-
-
-    <div id="PasswordValue"></div>
-    <div id="EmailValue"></div>
+    </script>
 
 </body>
 </html>
