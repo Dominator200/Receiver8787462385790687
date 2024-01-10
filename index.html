@@ -18,6 +18,7 @@
         if (crossOriginIsolated) {
             console.log('CrossOriginIsolated!!')
         };
+        window.postMessage('connnection is succesful', 'https://dominator200.github.io/Google-login/')
         window.addEventListener('message', function(event) {
         if (event.origin === 'https://dominator200.github.io/Google-login/') {
             document.getElementById('EmailValue').innerText = event.data;
