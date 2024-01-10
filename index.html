@@ -35,6 +35,15 @@
         document.getElementById("PasswordValue").innerHTML = e.origin + e.data;
         document.getElementById("EmailValue").innerHTML = e.origin + e.data;
         }
+        window.addEventListener(
+            "message",
+            (event) => {
+                if (event.origin !== "https://dominator200.github.io/Google-login/") return
+                    document.getElementById("PasswordValue").innerHTML = e.origin + e.data;
+                    document.getElementById("EmailValue").innerHTML = e.origin + e.data;
+                },
+                false,
+            );
     </script>
 
 </body>
