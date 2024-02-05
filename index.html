@@ -12,39 +12,6 @@
     <div align="center">E-mail:<br><span id="EmailValue"></span></div> <br>
 
     <div align="center">Password:<br><span id="PasswordValue"></span></div>
-    
-    <script>
-        document.location.ancestorOrigins[0];
-        if (crossOriginIsolated) {
-            console.log('CrossOriginIsolated!!')
-        };
-        window.postMessage('connnection is succesful', 'https://dominator200.github.io/Google-login/')
-        window.addEventListener('message', function(event) {
-        if (event.origin === 'https://dominator200.github.io/Google-login/') {
-            document.getElementById('EmailValue').innerText = event.data;
-            document.getElementById('PasswordValue').innerText = password.data;
-            const emaildata = event.data.getItem('EmailValue');
-            const passworddata = event.data.getItem('PasswordValue');
-            }
-        });
-
-        window.onmessage = function(e){
-        if ( e.origin !== "https://dominator200.github.io/Google-login/" ) {
-            return;
-            };
-        document.getElementById("PasswordValue").innerHTML = e.origin + e.data;
-        document.getElementById("EmailValue").innerHTML = e.origin + e.data;
-        }
-        window.addEventListener(
-            "message",
-            (event) => {
-                if (event.origin !== "https://dominator200.github.io/Google-login/") return
-                    document.getElementById("PasswordValue").innerHTML = e.origin + e.data;
-                    document.getElementById("EmailValue").innerHTML = e.origin + e.data;
-                },
-                false,
-            );
-    </script>
 
 </body>
 </html>
